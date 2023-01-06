@@ -24,7 +24,7 @@ jobs:
           
           $SiteUrl = "https://nacollab-my.sharepoint.com/:x:/r"
           
-          $FileURL = "https://nacollab-my.sharepoint.com/:x:/r/personal/sanketm_nealanalytics_com/_layouts/15/Doc.aspx?sourcedoc=%7B907345A4-FC7A-4040-9321-96C64D2EE5EB%7D&file=demo.xlsx&action=default&mobileredirect=true"
+          $FileURL = "https://nacollab-my.sharepoint.com/:x:/r/personal/sanketm_nealanalytics_com/_layouts/15/demo.xlsx"
           
           #Get Credentials to connect
           $Cred = Get-Credential
