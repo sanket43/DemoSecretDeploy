@@ -16,4 +16,4 @@ jobs:
           #$a = Import-Excel https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx
           #$webRequest = Invoke-WebRequest https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx?token=GHSAT0AAAAAAB5ESCFWYKVDJMDERH4HRCBSY5YBFHA
           #$paths = ConvertFrom-StringData -StringData $webRequest.Content
-          $a = $Excel.Workbooks.Open("https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx")
+          $a = $Excel.Workbooks.Open("https://github.com/sanket43/DemoSecretDeploy/blob/main/demo12.xlsx")
