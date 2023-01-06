@@ -1,0 +1,14 @@
+on: [push]
+name: AzurePowerShell
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: PowerShell script
+      uses: Amadevus/pwsh-script@v2.0.3
+      id: script
+      with:
+        script: |
+          Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+          $filepath = "./demo.xlsx"
+          $WorkBook = Import-Excel -Path $filepath
