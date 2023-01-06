@@ -9,6 +9,7 @@ jobs:
       id: script
       with:
         script: |
+          apt-get -y update && apt-get install -y --no-install-recommends libgdiplus libc6-dev
           #Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
           Install-Module -Name ImportExcel -Scope CurrentUser -Repository PSGallery -Force
           $filepath = ".github/workflows/demo1.xlsx"
