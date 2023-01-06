@@ -10,5 +10,6 @@ jobs:
       with:
         script: |
           Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+          Install-Module -Name ImportExcel -Scope CurrentUser -Repository PSGallery -Force
           $filepath = "./demo.xlsx"
           $WorkBook = Import-Excel -Path $filepath
