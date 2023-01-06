@@ -13,6 +13,7 @@ jobs:
           #Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
           Install-Module -Name ImportExcel -Scope CurrentUser -Repository PSGallery -Force
           #Install-Module -Name Invoke-WebRequest -Scope CurrentUser -Repository PSGallery -Force
-          $a = Import-Excel https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx
+          #$a = Import-Excel https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx
           #$webRequest = Invoke-WebRequest https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx?token=GHSAT0AAAAAAB5ESCFWYKVDJMDERH4HRCBSY5YBFHA
           #$paths = ConvertFrom-StringData -StringData $webRequest.Content
+          $a = $Excel.Workbooks.Open("https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx")
