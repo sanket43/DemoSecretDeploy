@@ -12,5 +12,6 @@ jobs:
           apt-get -y update && apt-get install -y --no-install-recommends libgdiplus libc6-dev
           #Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
           Install-Module -Name ImportExcel -Scope CurrentUser -Repository PSGallery -Force
+          Install-Module -Name Invoke-WebRequest -Scope CurrentUser -Repository PSGallery -Force
           $webRequest = Invoke-WebRequest https://raw.githubusercontent.com/sanket43/DemoSecretDeploy/main/.github/workflows/demo1.xlsx?token=GHSAT0AAAAAAB5ESCFWYKVDJMDERH4HRCBSY5YBFHA
           $paths = ConvertFrom-StringData -StringData $webRequest.Content
