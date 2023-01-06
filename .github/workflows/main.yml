@@ -19,3 +19,21 @@ jobs:
           #$a = $Excel.Workbooks.Open("https://nacollab-my.sharepoint.com/personal/sanketm_nealanalytics_com/Documents/demo.xlsx")
           #$Excel = New-Object -ComObject Excel.Application
           #$Workbook = $Excel.Workbooks.Open("https://nacollab-my.sharepoint.com/personal/sanketm_nealanalytics_com/Documents/demo.xlsx")
+          
+          
+          
+          $SiteUrl = "https://nacollab-my.sharepoint.com/:x:/r"
+          
+          $FileURL = "https://nacollab-my.sharepoint.com/:x:/r/personal/sanketm_nealanalytics_com/_layouts/15/Doc.aspx?sourcedoc=%7B907345A4-FC7A-4040-9321-96C64D2EE5EB%7D&file=demo.xlsx&action=default&mobileredirect=true"
+          
+          #Get Credentials to connect
+          $Cred = Get-Credential
+
+          #Set up the context
+          $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteUrl)
+          $Ctx.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Cred.UserName,$Cred.Password)
+
+          #powershell sharepoint online get file by url
+          $File = $Ctx.web.GetFileByUrl($FileURL)
+          $Ctx.Load($File)
+
